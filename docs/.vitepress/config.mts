@@ -1,16 +1,26 @@
 import { defineConfig } from 'vitepress'
+// 引入侧边栏配置
+import javaSidebarConfig from '../.vitepress/themeConfig/sidebar/javaSidebar.mts'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-CN',
   title: "Dy's Notes",
   description: "A Notebook",
-  base:'/notes/',
   themeConfig: {
+    // 右边的章节导航
+    outline: {
+      level:[2, 6],
+      label: '本页大纲'
+    },
+    // 最后更新时间戳
+    lastUpdated: {
+      text: '最后更新时间',
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '快速开始', link: '/start' }
+      { text: '快速开始', link: '/guide/start' }
     ],
 
     sidebar: {
@@ -49,23 +59,16 @@ export default defineConfig({
           ]
         }
       ],
-      '/notes/java/':[
-        {
-          text:'基础语法',
-          items:[
-            { text:'介绍', link:'./' },
-            { text:'java变量', link:'./var' }
-          ]
-        }
-      ]
+      ...javaSidebarConfig
     },
 
+    // 开启本地搜索
     search:{
       provider:'local'
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/pdy02/notes' }
     ]
   }
 })
