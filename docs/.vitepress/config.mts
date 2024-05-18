@@ -1,12 +1,17 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, loadEnv } from 'vitepress'
 // 引入侧边栏配置
 import javaSidebarConfig from '../.vitepress/themeConfig/sidebar/javaSidebar.mts'
+const env = loadEnv('', process.cwd());
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-CN',
   title: "Dy's Notes",
   description: "A Notebook",
+  base: env.VITE_BASE_URL,
+  vite:{
+
+  },
   themeConfig: {
     // 右边的章节导航
     outline: {
