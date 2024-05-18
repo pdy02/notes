@@ -1,7 +1,7 @@
 import { defineConfig, loadEnv } from 'vitepress'
 // 引入侧边栏配置
 import javaSidebarConfig from '../.vitepress/themeConfig/sidebar/javaSidebar.mts'
-const env = loadEnv('', process.cwd());
+const env = loadEnv(process.env.NODE_ENV??'development', process.cwd());
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
