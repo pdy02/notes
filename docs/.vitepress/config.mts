@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from 'vitepress'
 // 引入侧边栏配置
 import javaSidebarConfig from '../.vitepress/themeConfig/sidebar/javaSidebar.mts'
+// 加载环境变量
 const env = loadEnv(process.env.NODE_ENV??'development', process.cwd());
 
 // https://vitepress.dev/reference/site-config
@@ -9,8 +10,11 @@ export default defineConfig({
   title: "Dy's Notes",
   description: "A Notebook",
   base: env.VITE_BASE_URL,
-  vite:{
-
+  markdown:{
+    image:{
+      // 开启图片懒加载
+      lazyLoading: true,
+    }
   },
   themeConfig: {
     // 右边的章节导航
@@ -43,6 +47,7 @@ export default defineConfig({
             { text: 'JavaScript', link: '/guide/javascript' },
             { text: 'CSS', link: '/guide/css' },
             { text: 'HTML', link: '/guide/html' },
+            { text: 'JS设计模式', link: '/guide/design' },
           ]
         },{
           text:'后端',
@@ -50,7 +55,7 @@ export default defineConfig({
             { text: 'Node', link: '/guide/node' },
             { text: 'Java', link: '/guide/java' },
             { text: 'Python', link: '/guide/python' },
-            { text: 'Go', link: '/guide/rust' },
+            { text: 'Rust', link: '/guide/rust' },
           ]
         },{
           text: '工具',
@@ -61,6 +66,35 @@ export default defineConfig({
             { text: 'Jenkins', link: '/guide/jenkins' },
             { text: 'Nginx', link: '/guide/nginx' },
             { text: 'Linux', link: '/guide/linux' },
+          ]
+        }
+      ],
+      '/notes/node/':[
+        {
+          text: '入门',
+          items:[
+            { text: '介绍', link: '/notes/node/' }
+          ]
+        },
+        {
+          text: '工具',
+          items:[
+            {
+              text:'nvm',
+              collapsed: true,
+              items:[
+                { text: '安装和使用', link: '/notes/node/tools/nvm/nvm-using' },
+                { text: '常用命令', link: '/notes/node/tools/nvm/nvm-cmd' },
+              ]
+            },
+          ]
+        }
+      ],
+      '/notes/design/':[
+        {
+          text: '设计模式',
+          items:[
+            { text: '单例模式', link: '/notes/design/design-singleton' }
           ]
         }
       ],

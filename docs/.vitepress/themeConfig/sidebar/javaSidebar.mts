@@ -1,5 +1,5 @@
 import { DefaultTheme } from "vitepress"
-type sidebar = DefaultTheme.Sidebar
+
 export default {
   '/notes/java/':[
     {
@@ -21,4 +21,4 @@ export default {
       ]
     }
   ]
-} as sidebar;
+} as DefaultTheme.Sidebar;

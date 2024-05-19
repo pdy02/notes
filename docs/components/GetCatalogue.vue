@@ -21,6 +21,7 @@ type CatalogueT = {
 defineProps<{
     sidebarConfig: CatalogueT
 }>()
+
 </script>
 
 <style scoped lang="scss"></style>
