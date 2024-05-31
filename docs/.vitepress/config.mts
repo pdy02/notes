@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from 'vitepress'
 // 引入侧边栏配置
 import javaSidebarConfig from '../.vitepress/themeConfig/sidebar/javaSidebar.mts'
+import jsSidebarConfig from '../.vitepress/themeConfig/sidebar/jsSidebar.mts'
 // 加载环境变量
 const env = loadEnv(process.env.NODE_ENV??'development', process.cwd());
 
@@ -44,7 +45,7 @@ export default defineConfig({
           items:[
             { text: 'Vue', link: '/guide/vue' },
             { text: 'React', link: '/guide/react' },
-            { text: 'JavaScript', link: '/guide/javascript' },
+            { text: 'JavaScript', link: '/guide/js' },
             { text: 'CSS', link: '/guide/css' },
             { text: 'HTML', link: '/guide/html' },
             { text: 'JS设计模式', link: '/guide/design' },
@@ -98,7 +99,8 @@ export default defineConfig({
           ]
         }
       ],
-      ...javaSidebarConfig
+      ...javaSidebarConfig,
+      ...jsSidebarConfig
     },
 
     // 开启本地搜索

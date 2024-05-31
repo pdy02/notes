@@ -26,3 +26,4 @@ function runCommand(index = 0) {
 
 // 开始执行命令
 runCommand();
+console.log('\n\npush成功!!!');
