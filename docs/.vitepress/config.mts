@@ -20,7 +20,7 @@ export default defineConfig({
   themeConfig: {
     // 右边的章节导航
     outline: {
-      level:[2, 6],
+      level:[1, 3], // 右边大纲显示的标题级别
       label: '本页大纲'
     },
     // 最后更新时间戳
@@ -67,6 +67,7 @@ export default defineConfig({
             { text: 'Jenkins', link: '/guide/jenkins' },
             { text: 'Nginx', link: '/guide/nginx' },
             { text: 'Linux', link: '/guide/linux' },
+            { text: '错误记录', link: '/guide/err' },
           ]
         }
       ],
@@ -96,6 +97,29 @@ export default defineConfig({
           text: '设计模式',
           items:[
             { text: '单例模式', link: '/notes/design/design-singleton' }
+          ]
+        }
+      ],
+      '/notes/react/':[
+        {
+          text: '快速开始',
+          items:[
+            { text: '介绍', link: '/notes/react/' }
+          ]
+        },{
+          text: 'hooks',
+          items:[
+            { text: 'useState', link: '/notes/react/hook/useState' },
+            { text: 'useMemo', link: '/notes/react/hook/useMemo' },
+            { text: 'useEffect', link: '/notes/react/hook/useEffect' },
+          ]
+        }
+      ],
+      '/notes/error/':[
+        {
+          text:"错误记录",
+          items:[
+            { text: 'electron', link: '/notes/error/electron-err' }
           ]
         }
       ],

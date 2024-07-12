@@ -7,6 +7,7 @@ export default {
       items:[
         { text:'介绍', link:'/notes/java/basics/' },
         { text:'java变量', link:'/notes/java/basics/var' },
+        { text:'面向对象', link:'/notes/java/basics/ObjectOrientation' },
       ]
     },{
       text: '编辑器',
