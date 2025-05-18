@@ -154,8 +154,9 @@ export default defineConfig({
       {
         text: '入门',
         items:[
-        {text: '环境搭建', link: '/移动端/Flutter/入门/环境搭建' },
-        {}
+          {text: '环境搭建', link: '/移动端/Flutter/入门/环境搭建' },
+          {text: '项目文件', link: '/移动端/Flutter/入门/项目文件' },
+          {text: 'flutter常用命令', link: '/移动端/Flutter/入门/flutter常用命令' },
         ]
       },
       {
