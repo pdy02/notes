@@ -4,4 +4,3 @@ docs/.vitepress/dist
 *.ps1
 .vscode
 .idea
-docs/.obsidian
