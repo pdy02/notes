@@ -161,6 +161,7 @@ export default defineConfig({
       },
       {
         text: 'Dart语言',
+        collapsed: true,
         items:[
         {text: '0.1-Dart', link: '/移动端/Flutter/Dart语言/0.1-Dart' },
         {text: '0.2-Dart导图', link: '/移动端/Flutter/Dart语言/0.2-Dart导图' },
@@ -173,12 +174,31 @@ export default defineConfig({
         {text: '1.6-函数与作用域', link: '/移动端/Flutter/Dart语言/1.6-函数与作用域' },
         ]
       },
+      {
+        text:'Packages',
+        items: [
+          { text: 'dio', link: '/移动端/Flutter/包/工具/dio' },
+        ]
+      },
+      {
+        text: '开发经验',
+        items: [
+          {text: '持久化数据存储', link: '/移动端/Flutter/开发经验/持久化数据存储' },
+          {text: '文件拖拽', link: '/移动端/Flutter/开发经验/文件拖拽' },
+          {text: '主题管理', link: '/移动端/Flutter/开发经验/主题管理' },
+        ]
+      },
       ],
       '/life/':[
       {
         text: 'PC',
         items:[
         { text: 'C盘清理', link: '/life/PC/电脑C盘清理' },
+        ]
+      },{
+        text: '生活',
+        items:[
+          { text: '百度网盘高清播放', link: '/life/百度网盘 无会员高清倍速播放'}
         ]
       }
       ],
